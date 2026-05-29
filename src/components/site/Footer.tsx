@@ -60,11 +60,11 @@ function FooterCol({ title, links, extra }: { title: string; links: { to: string
       <h4 className="text-sm font-semibold mb-4">{title}</h4>
       <div className={extra ? "grid grid-cols-2 gap-x-4 gap-y-2" : "space-y-2"}>
         <ul className="space-y-2 text-sm text-muted-foreground">
-          {links.map((l) => (<li key={l.label}><Link to={l.to} className="hover:text-orange transition">{l.label}</Link></li>))}
+          {links.map((l) => (<li key={l.label}><Link to={l.to as any} className="hover:text-orange transition">{l.label}</Link></li>))}
         </ul>
         {extra && (
           <ul className="space-y-2 text-sm text-muted-foreground">
-            {extra.map((l) => (<li key={l.label}><Link to={l.to} className="hover:text-orange transition">{l.label}</Link></li>))}
+            {extra.map((l) => (<li key={l.label}><Link to={l.to as any} className="hover:text-orange transition">{l.label}</Link></li>))}
           </ul>
         )}
       </div>
