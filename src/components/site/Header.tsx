@@ -3,7 +3,7 @@ import { Menu, Phone, Sun, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "./Logo";
 
-const nav = [
+const nav: { to: string; label: string; hasMenu?: boolean }[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/services", label: "Services", hasMenu: true },
@@ -12,7 +12,7 @@ const nav = [
   { to: "/courses", label: "Courses" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact Us" },
-] as const;
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);
