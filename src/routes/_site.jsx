@@ -1,0 +1,15 @@
+import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+const Route = createFileRoute("/_site")({
+  component: () => <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+});
+export {
+  Route
+};
